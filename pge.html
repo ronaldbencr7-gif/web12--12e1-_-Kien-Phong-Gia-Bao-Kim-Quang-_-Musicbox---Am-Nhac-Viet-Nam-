@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Music Band</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.2.0/github-markdown.min.css">
+</head>
+<body class="w3-black dark-mode">
+
+<!-- Navbar -->
+<div class="w3-top w3-dark-nav">
+  <div class="w3-bar w3-card w3-left-align w3-large">
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-white">Trang chủ</a>
+    <a href="#band" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Giới thiệu</a>
+    <a href="#blog" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">MUSEEBLOG</a>
+    <a href="#gallery" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Hình ảnh</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Liên hệ</a>
+    <button onclick="toggleDarkMode()" class="w3-button w3-right w3-padding-large">🌓</button>
+  </div>
+</div>
+
+<!-- Header Parallax -->
+<header id="home" class="parallax w3-display-container w3-center">
+  <img class="mySlides parallax-img" src="head1.jpeg" />
+  <img class="mySlides parallax-img" src="head2.jpeg" />
+  <img class="mySlides parallax-img" src="head3.jpeg" />
+  <div class="w3-display-bottommiddle w3-padding-large w3-text-white w3-xlarge header-title">
+      Âm nhạc Việt Nam · Văn hoá · Con người
+  </div>
+</header>
+
+<!-- Band Section -->
+<div class="w3-container w3-content w3-center w3-padding-64" id="band">
+  <h2 class="w3-wide">VIETNAMESE MUSIC</h2>
+  <p class="w3-opacity"><i>Nền âm nhạc đa sắc màu</i></p>
+  <p class="w3-justify">
+   Âm nhạc Việt Nam là một kho tàng phong phú phản ánh lịch sử, văn hoá và đời sống con người. 
+   Từ những giai điệu dân gian như quan họ, ca trù, đến cải lương, vọng cổ, mỗi vùng miền đều mang nét đặc trưng riêng. Trong khi đó, nhạc hiện đại như V-pop, nhạc trẻ hay nhạc underground lại hòa trộn âm hưởng phương Tây với tinh thần Việt, tạo nên những giai điệu độc đáo và giàu cảm xúc. Âm nhạc Việt Nam không chỉ là giải trí mà còn là phương tiện lưu giữ ký ức, truyền cảm hứng và kết nối con người qua từng lời ca, nhịp điệu và giai điệu sâu lắng.
+  </p>
+
+  <div class="w3-row w3-padding-32">
+    <div class="w3-third">
+      <img src="ca sĩ.jpeg" class="w3-round w3-margin-bottom member-img" style="width:60%">
+      <p>Ca sĩ / Singer</p>
+    </div>
+    <div class="w3-third">
+      <img src="nhạc sỹ.jpeg" class="w3-round w3-margin-bottom member-img" style="width:60%">
+      <p>Nhạc sĩ / Composer</p>
+    </div>
+    <div class="w3-third">
+      <img src="producer.jpeg" class="w3-round w3-margin-bottom member-img" style="width:60%">
+      <p>Producer</p>
+    </div>
+  </div>
+</div>
+
+<!-- Blog Section -->
+<div class="w3-container w3-content w3-padding-64" id="blog">
+  <h2 class="w3-wide w3-center">BLOG ÂM NHẠC</h2>
+  <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third">
+          <div class="w3-card w3-hover-opacity blog-card" onclick="openBlog('b1')">
+              <img src="Vpop.jpg" style="width:100%">
+              <div class="w3-container w3-white">
+                  <h3>Sự tiến hoá của V-Pop</h3>
+              </div>
+          </div>
+      </div>
+      <div class="w3-third">
+          <div class="w3-card w3-hover-opacity blog-card" onclick="openBlog('b2')">
+              <img src="Dân gian.jpg" style="width:100%">
+              <div class="w3-container w3-white">
+                  <h3>Âm nhạc dân gian Việt Nam</h3>
+              </div>
+          </div>
+      </div>
+      <div class="w3-third">
+          <div class="w3-card w3-hover-opacity blog-card" onclick="openBlog('b3')">
+              <img src="KPOP.jpg" style="width:100%">
+              <div class="w3-container w3-white">
+                  <h3>Sự ảnh hưởng của K-Pop</h3>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Blog Modal -->
+<div id="blogModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-black w3-padding markdown-body">
+    <span onclick="closeBlog()" class="w3-button w3-display-topright w3-large">×</span>
+    <div id="blogContent" class="w3-container"></div>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div class="w3-container w3-content w3-padding-64" id="gallery">
+  <h2 class="w3-wide w3-center">HÌNH ẢNH</h2>
+  <div class="w3-row-padding">
+    <div class="w3-quarter"><img src="img1.jpeg" class="gallery-img"></div>
+    <div class="w3-quarter"><img src="img2.jpeg" class="gallery-img"></div>
+    <div class="w3-quarter"><img src="img3.jpeg" class="gallery-img"></div>
+    <div class="w3-quarter"><img src="img4.jpeg" class="gallery-img"></div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="w3-container w3-content w3-padding-64" id="contact">
+  <h2 class="w3-wide w3-center">LIÊN HỆ</h2>
+  <form id="contactForm" class="contact-form">
+      <input type="text" placeholder="Tên của bạn">
+      <input type="text" placeholder="Email">
+      <textarea placeholder="Tin nhắn"></textarea>
+      <button type="submit">Gửi</button>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+// Slideshow
+let slideIndex = 0;
+function showSlides(){
+  let slides = document.getElementsByClassName("mySlides");
+  for(let i=0;i<slides.length;i++) slides[i].style.display="none";
+  slideIndex++;
+  if(slideIndex>slides.length) slideIndex=1;
+  slides[slideIndex-1].style.display="block";
+  setTimeout(showSlides,3500);
+}
+showSlides();
+
+// Dark Mode Toggle
+function toggleDarkMode(){
+  document.body.classList.toggle('dark-mode');
+}
+
+// Blog Markdown Popup
+const blogPosts = {
+    b1: `# Sự tiến hoá của V-Pop\n\nV-Pop (Vietnamese Pop) là dòng nhạc trẻ hiện đại, bắt nguồn từ sự giao thoa giữa âm nhạc truyền thống Việt Nam và âm hưởng quốc tế. Trong những năm 1990, V-Pop chủ yếu chịu ảnh hưởng từ nhạc Hàn, Nhật và phương Tây, với các ca sĩ và nhóm nhạc biểu diễn các bản hit cover trước khi sáng tác những bài hát riêng.
+
+Đến những năm 2000, V-Pop bắt đầu hình thành bản sắc riêng, nổi bật với phong cách ballad tình cảm, R&B nhẹ nhàng, kết hợp các nhạc cụ dân tộc như đàn tranh, sáo trúc. Các nghệ sĩ như Mỹ Tâm, Đan Trường, Bằng Kiều trở thành những tượng đài đưa V-Pop tới đông đảo khán giả trong nước và cộng đồng người Việt ở nước ngoài.
+
+Trong thập kỷ gần đây, V-Pop phát triển mạnh mẽ với sự xuất hiện của các ca sĩ trẻ, nhóm nhạc thần tượng và các sản phẩm âm nhạc đầu tư bài bản về hình ảnh, MV, vũ đạo. Các nghệ sĩ như Sơn Tùng M-TP, MIN, Soobin Hoàng Sơn hay nhóm Da LAB đã đưa V-Pop tiếp cận thị trường quốc tế, kết hợp EDM, hip-hop, trap và các yếu tố văn hóa Việt Nam.
+
+Sự tiến hoá của V-Pop không chỉ là sự thay đổi về âm nhạc mà còn là minh chứng cho khả năng thích ứng, sáng tạo và hội nhập của ngành công nghiệp giải trí Việt Nam. Nhạc V-Pop giờ đây không chỉ là nền tảng của văn hoá đại chúng mà còn là cầu nối đưa âm nhạc Việt Nam ra thế giới.)`,
+    b2: `# Âm nhạc dân gian Việt Nam\n\nÂm nhạc dân gian Việt Nam là linh hồn của văn hóa truyền thống, phản ánh đời sống, tâm hồn và tri thức của người dân qua từng giai điệu. Từ quan họ Bắc Ninh, ca trù Hà Nội, đến đàn bầu, đàn tranh và hát ru các vùng miền, mỗi thể loại mang đậm bản sắc riêng, kể câu chuyện của cộng đồng và lịch sử dân tộc.
+
+Nhạc dân gian thường được trình diễn trong lễ hội, các dịp cưới hỏi, nghi lễ tâm linh hay đơn giản là trong sinh hoạt đời thường, kết hợp lời ca, nhịp điệu và hình thức trình diễn độc đáo. Nó không chỉ giúp bảo tồn giá trị truyền thống mà còn tạo cảm hứng cho nhiều nghệ sĩ hiện đại, khi họ kết hợp âm hưởng dân gian vào nhạc pop, nhạc điện tử hay jazz.
+
+Sự phong phú của âm nhạc dân gian Việt Nam thể hiện qua từng làn điệu, giai điệu và nhạc cụ dân tộc. Đây là kho tàng quý giá, góp phần nuôi dưỡng tâm hồn, giáo dục văn hóa và giữ gìn bản sắc dân tộc trong bối cảnh hội nhập toàn cầu..`,
+    b3: `# Sự ảnh hưởng của K-Pop\n\nTrong hơn một thập kỷ qua, K-Pop đã trở thành hiện tượng toàn cầu, và âm nhạc Việt Nam không nằm ngoài làn sóng này. Sự xuất hiện của các nhóm nhạc Hàn Quốc với hình ảnh được đầu tư kỹ lưỡng, vũ đạo đồng bộ và các sản phẩm MV chất lượng cao đã truyền cảm hứng cho các nghệ sĩ trẻ Việt Nam trong việc nâng cao tiêu chuẩn sản xuất âm nhạc.
+
+Nhiều ca sĩ V-Pop bắt đầu học hỏi phong cách trình diễn, cách xây dựng hình ảnh cá nhân và chiến lược marketing của K-Pop, từ việc phát hành MV chuyên nghiệp, tạo fandom, đến việc tương tác trên mạng xã hội. Các thể loại âm nhạc như dance-pop, EDM, hip-hop, và rap trong V-Pop cũng chịu ảnh hưởng rõ rệt từ các trào lưu K-Pop hiện đại.
+
+Sự ảnh hưởng này đồng thời tạo ra sự giao thoa văn hóa: các nghệ sĩ Việt vừa giữ được bản sắc dân tộc trong âm nhạc, vừa áp dụng kỹ thuật sản xuất và phong cách trình diễn quốc tế. Nhờ đó, V-Pop ngày càng trở nên năng động, đa dạng và có khả năng cạnh tranh với các thị trường âm nhạc quốc tế..`
+};
+function openBlog(id){
+  document.getElementById("blogContent").innerHTML = marked.parse(blogPosts[id]);
+  document.getElementById("blogModal").style.display = "block";
+}
+function closeBlog(){
+  document.getElementById("blogModal").style.display = "none";
+}
+
+// Reset Contact Form on Submit
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    this.reset();
+    alert("Form đã được gửi!");
+});
+</script>
+</body>
+</html>
