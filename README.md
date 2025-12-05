@@ -12,7 +12,7 @@ Liên hệ / Gửi phản hồi:
 Phần “LIÊN HỆ” để người dùng gửi ý kiến, góp ý hoặc đặt câu hỏi — giúp xây dựng cộng đồng, thu thập phản hồi, và phát triển website theo nhu cầu người xem.
 Responsive & dễ truy cập:
 Website hướng tới hiển thị tốt trên nhiều thiết bị — máy tính, điện thoại — để mọi người, dù đang dùng thiết bị nào, đều có thể dễ dàng truy cập, đọc bài viết và khám phá nội dung.
-**Công cụ đã sử dụng:** HTML, CSS, Javascript
+### Công cụ đã sử dụng:** HTML, CSS, Javascript
 Toàn bộ website vận hành dựa trên tổ hợp ba công nghệ nền tảng:
 HTML dùng để tạo cấu trúc: chia bố cục thành các phần như header, blog, gallery, contact.
 CSS dùng để định dạng giao diện: màu sắc, bố cục, font chữ, hình ảnh, cách các phần hiển thị trên mọi loại thiết bị.
